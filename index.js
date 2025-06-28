@@ -10,10 +10,12 @@ const server = http.createServer(app);
 // ✅ CORS must match Vite dev server (localhost:5173)
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:5173', // 👈 correct this
+    origin: 'scrible-fronend-i1hl.vercel.app', 
     methods: ['GET', 'POST']
   }
 });
+
+
 let players = []; // Each player: { id, name, score }
 
 io.on('connection', (socket) => {
