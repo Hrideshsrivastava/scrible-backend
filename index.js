@@ -10,7 +10,7 @@ const server = http.createServer(app);
 // ✅ CORS must match Vite dev server (localhost:5173)
 const io = new Server(server, {
   cors: {
-    origin: 'scrible-fronend-i1hl.vercel.app', 
+    origin: 'https://scrible-fronend-i1hl.vercel.app', 
     methods: ['GET', 'POST']
   }
 });
