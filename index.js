@@ -45,6 +45,9 @@ io.on('connection', (socket) => {
   socket.on('draw', (data) => {
     socket.broadcast.emit('draw', data);
   });
+    socket.on('draw-end', () => {
+    socket.broadcast.emit('draw-end');
+  });
 
   socket.on('disconnect', () => {
     console.log('User disconnected:', socket.id);
